@@ -1,206 +1,68 @@
-<!DOCTYPE html>
-<html lang="pt">
+<!DOCTYPE html><html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FM MAIA Construção</title>
+<title>FM Maia | Em Construção</title><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet"><style>
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: radial-gradient(circle at 30% 30%, #111 0%, #000 60%);
+        color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+    }
 
-<style>
+    .container {
+        max-width: 600px;
+        animation: fadeIn 1.8s ease forwards;
+        opacity: 0;
+    }
 
-/* ================= RESET ================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+    h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
 
-/* ================= PAGE ================= */
-body{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  background:#f4f5f7;
-  color:#222;
-  overflow:hidden;
-}
+    .burnt-yellow {
+        color: #cc7a00;
+        text-shadow: 0 0 12px rgba(204,122,0,0.6);
+    }
 
-/* ================= CONTAINER ================= */
-.container{
-  text-align:center;
-  max-width:650px;
-  padding:40px 24px;
-  position:relative;
-}
+    p {
+        font-size: 1.05rem;
+        color: #bbbbbb;
+        margin-top: 0;
+        letter-spacing: 0.5px;
+    }
 
-/* ================= TITLE ================= */
-.brand{
-  font-size:clamp(42px,8vw,72px);
-  font-weight:800;
-  letter-spacing:2px;
-}
+    .divider {
+        width: 80px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #cc7a00, transparent);
+        margin: 25px auto;
+        animation: glow 2.5s infinite ease-in-out;
+    }
 
-/* allow positioning per letter */
-.brand span{
-  display:inline-block;
-  position:relative;
-}
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
 
-/* lowered M */
-.m{
-  animation:lift 3s ease-in-out infinite;
-}
-
-/* crane anchor wrapper */
-.m-wrap{
-  position:relative;
-}
-
-
-/* hook motion */
-@keyframes drop{
-  0%,100% { transform:translateY(0); }
-  50% { transform:translateY(18px); }
-}
-
-/* M lifting motion */
-@keyframes lift{
-  0%,100% { transform:translateY(14px); }
-  50% { transform:translateY(14px); }
-}
-
-/* ================= SUBTITLE ================= */
-.subtitle{
-  margin-top:6px;
-  font-size:18px;
-  letter-spacing:6px;
-  color:#777;
-}
-
-/* ================= DIVIDER ================= */
-.divider{
-  width:60px;
-  height:2px;
-  background:#e2e2e2;
-  margin:30px auto;
-}
-
-/* ================= MESSAGE ================= */
-.message h1{
-  font-size:26px;
-  font-weight:600;
-  margin-bottom:12px;
-}
-
-.message p{
-  color:#666;
-  line-height:1.6;
-  font-size:17px;
-}
-
-/* ================= FOOTER ================= */
-footer{
-  margin-top:50px;
-  font-size:14px;
-  color:#888;
-}
-
-footer a{
-  color:inherit;
-  text-decoration:none;
-  font-weight:600;
-}
-
-footer a:hover{
-  opacity:.7;
-}
-
-/* ================= TRAFFIC CONES ================= */
-
-.cones{
-  position:absolute;
-  bottom:-20px;
-  left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  gap:40px;
-}
-
-.cone{
-  width:0;
-  height:0;
-  border-left:14px solid transparent;
-  border-right:14px solid transparent;
-  border-bottom:26px solid #f39c12;
-  position:relative;
-  animation:bounce 2.5s ease-in-out infinite;
-}
-
-.cone::after{
-  content:"";
-  position:absolute;
-  left:-14px;
-  top:10px;
-  width:28px;
-  height:6px;
-  background:white;
-}
-
-.cone:nth-child(2){ animation-delay:.4s; }
-.cone:nth-child(3){ animation-delay:.8s; }
-
-@keyframes bounce{
-  0%,100%{ transform:translateY(0); }
-  50%{ transform:translateY(-8px); }
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-  <!-- TITLE WITH CRANE ATTACHED -->
-  <div class="brand">
-    <span class="f">F</span>
-    <span class="m-wrap">
-      <span class="m">M</span>
-      <span class="crane">
-        <span class="hook-line"></span>
-        <span class="hook"></span>
-      </span>
-    </span>
-
-    <span class="rest">MAIA</span>
-  </div>
-
-  <div class="subtitle">CONSTRUÇÃO</div>
-
-  <div class="divider"></div>
-
-  <div class="message">
-    <h1>Website em construção</h1>
-    <p>
-      Estamos a preparar o nosso novo website.<br>
-      Voltaremos em breve com novidades.
-    </p>
-  </div>
-
-  <!-- Animated Cones -->
-  <div class="cones">
-    <div class="cone"></div>
-    <div class="cone"></div>
-    <div class="cone"></div>
-  </div>
-
-  <footer>
-    © 2026 FM MAIA Construção — Todos os direitos reservados<br>
-    Website by <a href="https://christophesilva.com" target="_blank">christophesilva.com</a>
-  </footer>
-
-</div>
-
-</body>
+    @keyframes glow {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+    }
+</style></head><body><div class="container">
+    <h1>F<span class="burnt-yellow">M</span> Maia</h1>
+    <div class="divider"></div>
+    <p>O nosso website encontra-se atualmente em construção.<br>
+    Estaremos online em breve.</p>
+</div></body>
 </html>
