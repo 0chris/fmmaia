@@ -98,6 +98,20 @@
     <div class="divider"></div>
     <p>O nosso website encontra-se atualmente em construção.<br>
     Estaremos online em breve.</p>
+
+  <p>Podem contactar-nos em:
+    <span id="email"></span>
+  </p>
+
+  <script>
+    const user = "geral";
+    const domain = "fmmaia.pt";
+    const email = `${user}@${domain}`;
+
+    // Insert the email into the page
+    document.getElementById("email").innerHTML =
+      `<a href="mailto:${email}">${email}</a>`;
+  </script>        
 </div><footer>
     © 2026 FM Maia · Todos os direitos reservados · <a href="https://christophesilva.com" target="_blank">christophesilva.com</a>
 </footer></body>
